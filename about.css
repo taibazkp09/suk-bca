@@ -1,0 +1,240 @@
+*{
+    margin: 0% ;
+    padding :0%;
+}
+#header{
+    display:flex;
+    flex-direction: row;
+    height: 60px;
+    background-color: #06389d;
+    color: whitesmoke;
+}
+#logo{
+    height: 60px;
+    width:60px;
+    border-radius: 50%;
+}
+#text{
+    padding-top: 25px;
+    padding-left: 20px;
+    font-size: 30px;
+}
+#list{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+ 
+
+    margin-left: 400px;
+    width: 600px;
+   
+    font-size: 20px;
+    text-decoration: none;
+    padding-top: 30px;
+
+
+}
+.link{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family:'Times New Roman', Times, serif;
+    
+    transition-property: font-size;
+    transition-duration: 0.5s;
+}
+.link:hover{
+    color:rgb(238, 253, 24);
+font-size: 25px;
+    text-decoration: underline;
+
+}
+
+#logo{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    
+}
+h3{
+    text-align: center;
+}
+#clg
+{
+   
+
+    width: 100%; /* Ensure it spans the full width of the container */
+    height: 100px;
+    object-fit:fill;
+}
+
+header p {
+    margin: 10px 0 0;
+    animation: slideInFromRight 2s ease-in-out;
+}
+
+/* Faculty Section */
+.faculty-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.faculty-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.faculty-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.faculty-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.faculty-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.faculty-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.faculty-card:hover img {
+    transform: scale(1.1);
+}
+
+.faculty-card h3 {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.faculty-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(76, 175, 80, 0.2);
+    transition: left 0.5s ease;
+    z-index: -1;
+}
+
+.faculty-card:hover::before {
+    left: 0;
+}
+
+/* Achievements Section */
+.achievements-section {
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.achievements-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.achievements-list {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+.achievements-list li {
+    background: #06389d;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    animation: slideUp 1s ease;
+}
+
+.achievements-list li::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+    transition: left 0.5s ease;
+}
+
+.achievements-list li:hover::after {
+    left: 0;
+}
+
+/* Footer */
+footer {
+    background-color: #06389d;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+

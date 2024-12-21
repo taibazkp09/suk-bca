@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Semester Resources</title>
+    <link rel="stylesheet" href="res.css">
+</head>
+<body>
+    <div class="body">
+        <div id="header">
+            <img id="logo" src="sblogo.jpeg">
+            <h2 id="text"><b> Sharanbasva University</b></h2>
+            <div id="list">
+               
+                    <a class="link" href="homeacc.html">HOME</a>
+                    <div class="co">
+                    <a class="link" href="download.html">COURSES</a>
+                </div>
+                    <a class="link" href="about.html">ABOUT US </a>
+                    <a class="link" href="contact.html">CONTACT</a>
+            </div>
+              
+            </div>
+         
+        </div>
+        <h2>Welocme to Sharnbasva university</h2>
+        <br>
+        <h1>BCA CO-ED</h1>
+    </div>
+    <div class="bgimg">
+       <img  id="bg"src="studyb.jpeg">
+    
+    <div class="container">
+        <h1>Student Semester Resources</h1>
+        <label for="semester">Choose Semester:</label>
+        <select id="semester">
+            <option value="" disabled selected>Select your semester</option>
+            <option value="sem1">Semester 1</option>
+            <option value="sem2">Semester 2</option>
+            <option value="sem3">Semester 3</option>
+            <option value="sem4">Semester 4</option>
+            <option value="sem5">Semester 5</option>
+            <option value="sem6">Semester 6</option>
+            
+        </select>
+        <button onclick="loadResources()">Get Resources</button>
+
+        <div id="resources" class="resources">
+            <!-- Resources links will be displayed here -->
+        </div>
+    </div>
+    </div>
+
+    <script>
+        function loadResources() {
+            const semester = document.getElementById('semester').value;
+            const resourcesDiv = document.getElementById('resources');
+
+            if (!semester) {
+                resourcesDiv.innerHTML = '<p>Please select a semester to view resources.</p>';
+                return;
+            }
+
+            // Mock data for links to notes, syllabus, and PYQ pages
+            const data = {
+                sem1: {
+                    notes: 'download.html',
+                    
+                },
+                sem2: {
+                    notes: 'download2.html',
+                    
+                },
+                // Add data for other semesters as needed
+            };
+
+            const semesterData = data[semester];
+
+            if (semesterData) {
+                resourcesDiv.innerHTML = `
+                    <h2>Resources for ${semester.replace('sem', 'Semester ')}</h2>
+                    <a href="${semesterData.notes}" target="_blank">Click here to access</a>
+                    
+                `;
+            } else {
+                resourcesDiv.innerHTML = '<p>No resources found for the selected semester.</p>';
+            }
+        }
+    </script>
+</body>
+</html>
